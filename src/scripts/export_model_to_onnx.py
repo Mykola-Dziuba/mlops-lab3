@@ -32,3 +32,7 @@ def export_model_to_onnx(settings: Settings):
 
     print(f"ONNX model exported to {onnx_path}")
     return onnx_path
+
+def run():
+    settings = Settings()
+    export_model_to_onnx(settings)
