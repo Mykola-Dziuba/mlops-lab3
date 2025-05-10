@@ -20,3 +20,7 @@ def save_model(settings: Settings, model, tokenizer):
 def download_artifacts(settings: Settings):
     model, tokenizer = download_model(settings)
     save_model(settings, model, tokenizer)
+
+def run():
+    settings = Settings()
+    download_artifacts(settings)
