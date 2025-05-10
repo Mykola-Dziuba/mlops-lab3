@@ -2,12 +2,12 @@ name: Hello World workflow
 
 on:
   workflow_dispatch:
-    # enables manual trigger from GitHub UI
+
 
 jobs:
   hello-world-job:
-    runs-on: ubuntu-latest # use Ubuntu virtual machine
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Print Hello World # define step name
-      run: echo "Hello world!" # print message to the console
+    - name: Print Hello World
+      run: echo "Hello world!"
