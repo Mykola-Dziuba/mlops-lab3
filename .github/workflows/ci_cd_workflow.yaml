@@ -14,6 +14,7 @@ on:
 
 jobs:
   integration:
+    if: ${{ inputs.steps == 'all' || inputs.steps == 'integration' }}
     name: continuous-integration
     runs-on: ubuntu-latest
 
@@ -37,6 +38,8 @@ jobs:
       run: uv run pytest tests
 
   deployment:
+    if: ${{ inputs.steps == 'all' && needs.integration.result == 'success' }}
+    needs: integration
     name: model-deployment
     runs-on: ubuntu-latest
 
